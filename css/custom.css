@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+    font-family: 'Mark-Pro';
+    src:url('../fonts/Mark-Pro.woff') format('woff'),
+          url('../fonts/Mark-Pro.woff2') format('woff2'),
+          url('../fonts/Mark-Pro.svg#Mark-Pro') format('svg'),
+          url('../fonts/Mark-Pro.eot'),
+          url('../fonts/Mark-Pro.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/Mark-Pro.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+  }
+body{color: #fff; font-family: 'Mark-Pro';} 
+a,a:hover{text-decoration: none; color: #fff;} 
+img{max-width: 100%;}
+/* landing page css */
+.page-box {min-height: 100vh;background-size: cover;background-position: center center;background-repeat: no-repeat; background-attachment: fixed; padding: 32px 67px 0px 300px;}
+
+/* sidebar css */
+.sidebar {position: fixed;left: 0;top: 0;width: 300px;z-index: 999; height:100%;display: flex;justify-content: space-between;flex-direction: column; min-height: 440px;}
+.sidebar-logo {text-align: center;padding: 54px 10px 30px;}
+.sidebar-nav {position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
+.sidebar-nav .main-nav {margin: 0;list-style-type: none;background: #000;border-radius: 0px 10px 10px 0px;border: 5px solid transparent;border-image: linear-gradient(90deg, rgba(49, 0, 0, 1), rgba(211, 211, 211, 1), rgba(49, 0, 0, 1));border-image-slice: 1;border-left: none;padding: 25px 0;}
+.sidebar-nav .main-nav > li {margin: 0 0 30px;}
+.sidebar-nav .main-nav > li:last-child{margin: 0px;}
+.sidebar-nav .main-nav > li > a {display: flex;position: relative;min-width: 63px;justify-content: center; font-family: 'Stick No Bills', sans-serif;}
+.sidebar-nav .main-nav li a span {position: absolute;left: 100%;right: auto;border: 3px solid transparent;color: #fff;text-transform: uppercase;padding: 8px 30px;background:linear-gradient(#000, #000) padding-box, linear-gradient(to left, rgba(255, 255, 255, 0.82), rgba(49, 0, 0, 0.82)) border-box;display: flex;align-items: center;justify-content: center; border-radius: 0 5px 5px 0;letter-spacing: 6px;font-size: 22px;top: 0px;opacity: 0;transition: all 0.3s ease-out 0s; font-weight: 500; white-space: nowrap; min-width: 187px; pointer-events: none;}
+.sidebar-nav .main-nav li a:hover span,
+.sidebar-nav .main-nav li.active a span{opacity:1; pointer-events: all;}
+
+.sidebar-social {text-align: center; padding:20px 10px 20px;}
+.sidebar-social h5 {font-size: 22px;text-transform: uppercase;margin: 0 0 20px;background: linear-gradient(to top, rgba(132, 132, 132, 1), rgba(255, 255, 255, 1), rgba(82, 81, 81, 1));-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: 500; font-family: 'Stick No Bills', sans-serif; letter-spacing: 6px;}
+.social-links {list-style-type: none;padding: 0;margin: 0;display: flex;justify-content: center;}
+.social-links li {margin: 0 10px;}
+
+.main-content {background: linear-gradient(#000,#000) padding-box, linear-gradient(180deg,rgba(73, 0, 0, 0.82),rgba(134, 5, 5, 0.81)) border-box; border: 3px solid transparent;display: block;margin: 0 auto;width: 100%; border-radius: 30px 30px 0px 0px;overflow: hidden; border-bottom: none;}
+.inner-container {width: 1222px;max-width: 90%; margin: 0 auto; box-shadow: 0px 4px 4px 6px rgba(103, 2, 2, 0.45);padding: 120px 30px 120px; position: relative; min-height: calc(100vh - 110px);}
+.box-bg{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-position:center center; background-size: contain; background-repeat: no-repeat;}
+.box-bg:before{position: absolute; content:""; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(73, 0, 0, 0) 0%, #310000 100%);}
+
+
+.btn {color: #fff;display: flex;background: rgba(0, 0, 0, 0.25);font-size: 22px;font-family: 'Stick No Bills';letter-spacing: 7px;align-items: center;justify-content: center;height: 55px;padding: 0 30px;border-radius: 5px;border: 3px solid transparent;border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(49, 0, 0, 0.82), rgba(49, 0, 0, 0.82), rgba(255, 255, 255, 0.82));border-image-slice: 1;transition: all 0.3s ease-out 0s;}
+.btn:hover{background: #000;}
+
+.top-heading {display: flex;background: #310000;flex-wrap: wrap;padding: 0 40px;box-shadow: 0px 4px 4px rgb(49 0 0 / 49%), inset 0px 4px 4px rgb(0 0 0 / 25%);align-items: center;justify-content: space-between;}
+.top-heading .left-nav {margin-top: auto;}
+.left-nav .link-list {padding: 0;margin: 0;list-style-type: none;display: flex;}
+.left-nav .link-list li {margin-right: 10px;}
+.left-nav .link-list li a {color: #fff;padding: 5px 20px;border-radius: 20px 20px 0px 0px;font-size: 22px;letter-spacing: 7px;text-transform: uppercase;font-family: 'Stick No Bills';}
+.left-nav .link-list li.active a{background: rgba(0, 0, 0, 0.61);}
+.top-heading .right-btn {padding: 9px 0;}
+
+.home-content {text-align: center;position: relative;z-index: 10;}
+.home-content h2 {font-size: 25px; line-height: 32px;text-transform: uppercase;margin: 60px 0 180px;}
+.home-content ul {padding: 0;margin: 0 auto;list-style-type: none;max-width: 560px;text-align: left;}
+.home-content ul li{padding: 0 0 0 40px;position: relative;margin: 0 0 15px;font-size: 25px;line-height: 35px;background: url(../images/list-arrow.svg) no-repeat left center; background-size: 20px auto;;}
+.home-content .btn {max-width: 345px;margin: 70px auto 0;}
+
+/* responsive design */
+@media screen and (min-width:1900px) and (min-height:1000px) {
+    .sidebar-nav .main-nav > li{margin-bottom:70px;}
+}
+@media screen and (min-width:1365px){
+    .sidebar-nav .main-nav > li {margin: 0 0 20px;}
+}
+@media screen and (max-width:1199px){
+    .sidebar{width: 200px;}
+    .sidebar-logo{padding: 30px 10px 30px;}
+    .sidebar-nav .main-nav > li {margin: 0 0 15px;}
+    .sidebar-nav .main-nav li a span{padding: 4px 15px; letter-spacing:3px;font-size: 16px; min-width: 117px;} 
+    .sidebar-nav .main-nav > li > a img {max-height: 30px;}
+    .sidebar-social h5 {font-size: 16px; letter-spacing: 3px; margin: 0 0 10px;}
+    .social-links li img {max-height: 24px;}
+    .page-box{padding: 32px 32px 0px 200px;}
+    .left-nav .link-list li a {padding: 5px 20px;border-radius: 10px 10px 0px 0px;font-size: 16px;letter-spacing: 3px;}
+    .btn{height: 40px; padding: 0 15px; letter-spacing: 3px; font-size: 16px;}
+    .home-content .btn {max-width: 225px;}
+    .home-content h2{margin: 60px 0 100px; font-size: 20px; line-height: 30px;}
+    .home-content ul li{font-size: 20px; line-height: 30px;}  
+}
+@media screen and (max-width:991px){
+    
+    .top-heading{padding: 0 20px;}
+    .home-content ul li {font-size: 16px;    line-height: 26px;    background-size: 18px auto;    padding-left: 30px;}
+    
+    
+}
