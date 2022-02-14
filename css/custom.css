@@ -212,6 +212,20 @@ to { transform: translateX(-50%); }
 .map-team-block .section-title:after{position: absolute;content: "";left:0; top:50%;width:100%;height:129px; background-image:url(../images/team-star1.png) url(../images/team-star2.png); background-repeat: no-repeat; background-position:center center; transform: translateY(-50%); pointer-events: none;}
 .map-team-block .team-content p {margin: 0 auto;max-width: 82.5%;font-size: 25px;letter-spacing: 0.33em;line-height: 1.3;}
 
+.other-miltestone .map-milestone-block .section-title:before{display: none;}
+.other-miltestone .milestone-banner{position: relative;}
+.other-miltestone .milestone-banner .main-img {margin-bottom: -20%;}
+.other-miltestone .milestone-banner .shape1 {position: absolute;right: 0;top:-50px; margin: 0px; max-height: 48%;}
+.other-miltestone .milestone-banner .shape2 {position: absolute;left: 50%;top: 50%;margin: -40px 0 0;transform: translate(-50%,-50%);max-height: 100%;}
+.other-miltestone .milestone-banner .shape2 + .main-img {margin-bottom: -40px;}
+
+.other-miltestone .milestone-banner .shape3 {position: absolute;left: 2%;top: 20%;margin: -40px 0 0;max-height: 40%;right: -10px;}
+.other-miltestone .milestone-banner .shape3 + .main-img {margin-bottom: -23%;}
+
+.other-miltestone .milestone-banner .shape4 {position: absolute;left: 50%;top: 50%;margin: -40px 0 0;transform: translate(-50%,-50%);max-height: 100%;}
+.other-miltestone .milestone-banner .shape4 + .main-img {margin-bottom: -55px;}
+
+
 
 /* road map css end */
 
@@ -293,14 +307,17 @@ to { transform: translateX(-50%); }
     .fund-structure-rte p{font-size: 16px; letter-spacing: 0.20em;}
 
     .fund-structure-rte:before{    background-position: right top, left 39%, right bottom;background-size: 90px, 100px, 100px;bottom: 0;top:-50px;} 
-    .milestone-content h4{font-size:24px;}
-    .milestone-content p {font-size: 18px;}    
+    .milestone-content h4{font-size:20px;letter-spacing: 0.22em;}
+    .milestone-content p {font-size: 16px;letter-spacing: 0.22em;}    
 
     .metaverses-list li a .social-title{font-size: 14px;top: -32px;}
     .map-partner-block{margin-bottom: -20px;}
 
     .map-team-block .team-content p{font-size: 20px;}
     .map-team-block{min-height: 750px;}
+
+    .inner-container.milestone-container:before {left: -40px;bottom: -10px;width: 70px;height: 150px;background-size: contain;}
+    .inner-container.milestone-container:after {right: -23px;top: 50%;width: 40px;height: 40px;background-size: contain;}
 }
 @media screen and (max-width:1365px){
     .sidebar-nav .main-nav > li {margin: 0 0 20px;}
@@ -313,8 +330,7 @@ to { transform: translateX(-50%); }
     .fund-heading h4,
     .fund-heading p,
     .fund-overview-content p{letter-spacing: 0.2em;}
-    .inner-container.milestone-container:before {left: -40px;bottom: -10px;width: 70px;height: 150px;background-size: contain;}
-    .inner-container.milestone-container:after {right: -23px;top: 50%;width: 40px;height: 40px;background-size: contain;}
+    
 
     .road-map-container.team-container:before{background-size: 320px;background-position: left top 60%;}
 }
@@ -425,5 +441,5 @@ to { transform: translateX(-50%); }
     .metaverses-list li a .social-title {font-size:9px;top: -20px;}
     .map-team-block {min-height: 500px;}   
     .road-map-container.team-container:before {background-size: 210px;background-position: left top 65%;}
-    
+    .milestone-content p {font-size: 14px;}   
 }
