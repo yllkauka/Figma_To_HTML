@@ -178,13 +178,14 @@ to { transform: translateX(-50%); }
 /* road map css start */
 .inner-container.road-map-container.milestone-container {padding-bottom: 0;}
 .inner-container.milestone-container:before{position: absolute; content:""; left:-70px;bottom:-30px; width: 132px; height:350px; background:url(../images/milestone-icon1.png) no-repeat center center; z-index: 1;}
-.inner-container.milestone-container:after{position: absolute; content:""; right:-40px;top:50%; width: 70px; height:70px; background:url(../images/milestone-icon2.png) no-repeat center center; z-index: 1;}
+/* .inner-container.milestone-container:after{position: absolute; content:""; right:-40px;top:50%; width: 70px; height:70px; background:url(../images/milestone-icon2.png) no-repeat center center; z-index: 1;} */
+
 .milestone-content {position: relative;z-index: 9;}
 .milestone-content h4 {margin: 0 0 15px;font-size: 30px;letter-spacing: 0.33em;line-height: 1.3;}
 .milestone-content img {display: block;margin: 0 auto -65px;}
 .milestone-content p {font-size: 25px;letter-spacing: 0.33em;line-height: 1.3;text-align: right;max-width: 95%;margin-left: auto;margin-bottom: 30px;}
 .map-milestone-block .section-title {position: relative;}
-.map-milestone-block .section-title:before{position: absolute; content:""; right:2%;bottom:-40px; width:218px; height:76px; background:url(../images/milestone-icon3.png) no-repeat center center;}
+.milestone-slide0 .map-milestone-block .section-title:before{position: absolute; content:""; right:2%;bottom:-40px; width:218px; height:76px; background:url(../images/milestone-icon3.png) no-repeat center center;}
 
 .map-partner-block {position: relative;z-index: 9; margin-bottom: -70px;}
 .partners-content {text-align: center;}
@@ -225,7 +226,69 @@ to { transform: translateX(-50%); }
 .other-miltestone .milestone-banner .shape4 {position: absolute;left: 50%;top: 50%;margin: -40px 0 0;transform: translate(-50%,-50%);max-height: 100%;}
 .other-miltestone .milestone-banner .shape4 + .main-img {margin-bottom: -55px;}
 
+.milestone-wrapper {position: relative;}
+.wave-effect {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    overflow: hidden;
+    width: 100%;
+    transform: translateX(-50%);
+    max-width: 1019px;
+}
+.wave-effect .video{width:170%;opacity: 0.2;position: absolute;left: 50%;top: 50%;height: auto;transform: translate(-29%, -52%);}
+.wave-effect img {display: block; margin: 0 auto 0px; opacity: 0;}
+.milestone-banner{position: relative;}
+.milestone-banner .main-img {opacity: 0; margin-bottom: 0;}
+.milestone-content {display: flex !important;flex-direction: column; min-height:850px;}
 
+.milestone-banner .shape {position: absolute;left: 0;top: 0; margin:0;}
+.milestone-content.milestone-item2 .shape{top:-40px;max-height: 48%;right:0; left:auto;}
+.milestone-content.milestone-item3 .shape{left: 50%;top: 50%;transform: translate(-50%,-50%);max-height: 100%; margin-top: -20px;}
+.milestone-content.milestone-item4 .shape{left: 2%;top: 0%;max-height:40%; right: -10px;}
+.milestone-content.milestone-item5 .shape{left: 50%;top: 50%;transform: translate(-50%,-50%);max-height: 100%;}
+.milestone-content.milestone-item1 .milestone-banner {margin-bottom: -60px;}
+.milestone-content.milestone-item2 .milestone-banner {margin-bottom: -12%;}
+.milestone-content.milestone-item3 .milestone-banner {margin-bottom: -40px;}
+.milestone-content.milestone-item4 .milestone-banner {margin-bottom: -20%;}
+.milestone-content.milestone-item5 .milestone-banner {margin-bottom: -30px;}
+.map-milestone-block .milestone-button{position: absolute; right:-40px;top:50%; width: 70px; height:70px; z-index: 1; cursor: pointer;}
+
+.landing-container{overflow: hidden;}
+.landing-container .box-bg{display: flex; align-items: center; justify-content: center;}
+.landing-container .box-bg .world-image{position: relative;transform: translate(0px,0px);}
+.landing-container .box-bg .world-image{
+    -webkit-animation-name: world;
+	animation-name: world;
+    -webkit-animation-duration:15s;
+	animation-duration: 15s;
+	-webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    
+}
+@-webkit-keyframes world{
+    0%{
+        transform: translate(0px,0px) ;
+    }
+    20%{
+        transform: translate(30px,0px);
+    }
+    40% {
+        transform: translate(0px,0px);
+    }
+    60% {
+        transform: translate(-30px,0px);
+    }
+    80% {
+        transform: translate(0px,30px);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+
+}
 
 /* road map css end */
 
@@ -318,6 +381,9 @@ to { transform: translateX(-50%); }
 
     .inner-container.milestone-container:before {left: -40px;bottom: -10px;width: 70px;height: 150px;background-size: contain;}
     .inner-container.milestone-container:after {right: -23px;top: 50%;width: 40px;height: 40px;background-size: contain;}
+
+    .map-milestone-block .milestone-button{top:60%;}
+    .milestone-content{min-height:600px;}
 }
 @media screen and (max-width:1365px){
     .sidebar-nav .main-nav > li {margin: 0 0 20px;}
@@ -333,6 +399,7 @@ to { transform: translateX(-50%); }
     
 
     .road-map-container.team-container:before{background-size: 320px;background-position: left top 60%;}
+    .map-milestone-block .milestone-button { width: 40px; right: -23px;}
 }
 @media screen and (max-width:1199px){
     .sidebar{width: 200px;}
@@ -386,6 +453,8 @@ to { transform: translateX(-50%); }
     .road-map-container.partner-container:before{    background-size: 290px;     background-position: left top 96%;}
     .map-team-block .team-content p{max-width: 100%;}
     .map-team-block .team-content p {font-size: 16px;letter-spacing: 0.2em;}
+    .map-milestone-block .milestone-button {top: 36%;}
+    .milestone-content{min-height:450px;}
     
 }
 @media screen and (max-width:991px){
@@ -434,7 +503,7 @@ to { transform: translateX(-50%); }
     
     .inner-container.milestone-container:before{height:90px;}
     .inner-container.milestone-container:after{height:30px;}
-    .map-milestone-block .section-title:before{background-size:contain; width:120px;}
+    .milestone-slide0 .map-milestone-block .section-title:before{background-size:contain; width:120px;}
 
     .metaverses-list {padding: 0 5px;}
     .metaverses-list li a{padding: 8px 10px;}
