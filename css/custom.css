@@ -16,7 +16,7 @@ body{color: #fff; font-family: 'Archivo', sans-serif;}
 a,a:hover{text-decoration: none; color: #fff;} 
 img{max-width: 100%;}
 /* landing page css */
-.page-box {min-height: 100vh;background-size: cover;background-position: center center;background-repeat: no-repeat; background-attachment: fixed; padding: 32px 67px 0px 300px; overflow: hidden;}
+.page-box {min-height: 100vh;background-size: cover;background-position: center center;background-repeat: no-repeat; background-attachment: fixed; padding: 32px 67px 0px 300px; overflow: hidden; position: relative;}
 
 /* sidebar css */
 .sidebar {position: fixed;left: 0;top: 0;width: 300px;z-index: 999; height:100%;display: flex;justify-content: space-between;flex-direction: column; min-height: 440px;}
@@ -231,21 +231,48 @@ to { transform: translateX(-50%); }
 .fund-heading {max-width: 83%;}
 .fund-heading h4 {margin: 0 0 15px;font-size: 30px;line-height: 1.3;letter-spacing: 0.33em;text-transform: uppercase;font-weight: 400;}
 .fund-heading p {font-size: 25px;letter-spacing: 0.33em;}
-.fund-overview-content p {font-size: 18px;line-height: 1.3;letter-spacing: 0.33em;max-width: 70.2%;}
+.fund-overview-content p {font-size: 18px;line-height: 1.3;letter-spacing: 0.33em;max-width: 63.2%;}
 .fund-overview-content p:nth-child(2n+1) {margin-left: auto;text-align: right;}
 .fund-overview-content p:last-child{max-width: 100%;}
 
-.fund-overview-block{position: relative; padding-bottom: 180px;}
-.fund-overview-block:before {position: absolute;content: "";left: 0;top:0px;width: 100%;bottom: 0;background-image:url(../images/overview-bg2.png), url(../images/overview-bg3.png), url(../images/overview-bg4.png), url(../images/overview-bg5.png);background-repeat: no-repeat;background-position:right 9% top 190px, 4% 80%, 40% bottom, 73% 97%;z-index: 1;}
+.fund-overview-block{position: relative; padding-bottom:0px;}
+/* .fund-overview-block:before {position: absolute;content: "";left: 0;top:0px;width: 100%;bottom: 0;background-image:url(../images/overview-bg2.png), url(../images/overview-bg3.png), url(../images/overview-bg4.png), url(../images/overview-bg5.png);background-repeat: no-repeat;background-position:right 9% top 190px, 4% 80%, 40% bottom, 73% 97%;z-index: 1;} */
 .fund-overview-block .section-title h2{display: inline-block;}
-.fund-overview-block .section-title h2:after {position: absolute;content: "";right: -150px;width: 212px;height: 264px;top: -89px;background: url(../images/overview-bg1.png) no-repeat center center;}
-
+.fund-overview-block .section-title h2:after {position: absolute;content: "";    right: -170px;width: 192px;height: 234px;top: -72px;background: url(../images/overview-bg1.png) no-repeat center center;}
+.fund-overview-block .overview-img1{position: absolute; right:9%; top: 0;}
+.fund-overview-banner img{margin:0 auto; display: block;}
 .main-fund-content.main-structure-content {position: relative;}
 .main-fund-content.main-structure-content .fund-structure-rte {position: relative;z-index: 9;}
 
+.fund-overview-block .main-fund-content{padding-top:50px;}
+.fund-main-info .overview-img2 {position: absolute;right:10px;top: 270px;z-index: 1;}
+.map-milestone-block .section-title h2:before,
+.fund-overview-block .section-title h2:before{display: none;}
+.map-milestone-block .section-title h2,
+.fund-overview-block .section-title h2 {
+display: inline-block;
+font-size: 120px;
+line-height: 1.1;
+padding: 0px;
+text-transform: uppercase;
+margin: 0 0 20px;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(144, 144, 144, 0.64), rgba(3, 43, 146, 0));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 700;
+font-family: 'Archivo';
+letter-spacing: 0;
+}
+
 .fund-structure-rte p {margin-left: auto;font-size: 18px;letter-spacing: 0.33em;max-width: 88%;text-align: right;}
-.fund-structure-rte h5 {margin: 0 0 15px;font-size: 25px;letter-spacing: 0.3em;max-width: 84%;}
-.fund-structure-rte:before {position: absolute;content: "";left: 0;right: 0;top:-90px;bottom:-50px; background-image: url(../images/structure-bg1.png), url(../images/structure-bg2.png), url(../images/structure-bg3.png); background-repeat: no-repeat;background-position: right top, left 34%, right bottom;}
+.fund-structure-rte h5 {margin: 0 0 30px;font-size: 25px;letter-spacing: 0.3em; max-width: 84%;}
+.fund-structure-rte h5:first-child{max-width: 100%; margin-top: 0;}
+.fund-structure-rte h5 {margin-top: 50px;}
+/* .fund-structure-rte:before {position: absolute;content: "";left: 0;right: 0;top:-90px;bottom:-50px; background-image: url(../images/structure-bg1.png), url(../images/structure-bg2.png), url(../images/structure-bg3.png); background-repeat: no-repeat;background-position: right top, left 34%, right bottom;} */
+
+.main-structure-content .structure-img1{position: absolute; right: 0; top:-150px;}
+.main-structure-content .structure-img2{position: absolute; left: 0; top:29%;}
+.main-structure-content .structure-img3{position: absolute; right: 0; bottom:0;}
 
 .supply-amount {position: relative;width: 100%;max-width: 620px;display: flex;min-height: 520px;align-items: center;justify-content: center;margin:110px auto 100px;flex-direction: column;}
 .supply-amount h5 {font-size: 30px;line-height: 1.3;margin: 0 0 20px;text-transform: uppercase;letter-spacing: 0.2em;}
@@ -270,7 +297,7 @@ to { transform: translateX(-50%); }
 .map-milestone-block .section-title {position: relative;}
 .milestone-slide0 .map-milestone-block .section-title:before{position: absolute; content:""; right:2%;bottom:-40px; width:218px; height:76px; background:url(../images/milestone-icon3.png) no-repeat center center;}
 
-.map-partner-block {position: relative;z-index: 9; margin-bottom: -70px;}
+.map-partner-block {position: relative;z-index: 9; margin-bottom:0px; min-height:1000px;}
 .partners-content {text-align: center;}
 .partners-content h4 {font-size: 30px;letter-spacing: 0.33em;line-height: 1.3;margin: 0 0 30px;}
 .metaverses-list {padding: 0 20px;margin: 60px auto 0;list-style-type: none;display: flex;/* flex-wrap: wrap; */max-width: 992px; /*border: 3px solid #fff;border-radius: 61px;box-shadow: inset 0px 4px 4px rgb(0 0 0 / 25%);filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/}
@@ -278,6 +305,9 @@ to { transform: translateX(-50%); }
 .metaverses-list li a {border-right: 3px solid #fff;display: flex;height: 100%;position: relative;justify-content: center;padding: 38px 15px;}
 .metaverses-list li a .social-title {position: absolute;top: -40px;width: 100%;font-size: 22px;font-weight: 700;letter-spacing: 0px;text-transform: uppercase;}
 .metaverses-list li:last-child a{border:none;}
+
+.partner-bottom-image {position: absolute;right: 0;bottom: 0;top: auto;}
+.partner-bottom-image img {max-height: 100%;}
 
 .road-map-container.partner-container{padding-bottom:0px;display: flex;flex-direction: column;}
 .road-map-container.partner-container:before{position: absolute;content: "";left: 0;top: 0;width: 100%;height: 100%; background-image:url(../images/partner-icon2.png); background-repeat: no-repeat; background-position: left top 75%; z-index:2;}
@@ -289,7 +319,7 @@ to { transform: translateX(-50%); }
 
 .road-map-container.team-container{padding-bottom:0px;display: flex;flex-direction: column;}
 .road-map-container.team-container:before{position: absolute;content: "";left: 0;top: 0;width: 100%;height: 100%; background-image:url(../images/partner-icon2.png); background-repeat: no-repeat; background-position: left top 80%; z-index:2;}
-.team-container .bottom-logo{margin-top:auto;display: flex;margin-left: auto;justify-content: flex-end; position: relative; z-index: 2; padding-bottom:10px;}
+.team-container .bottom-logo{margin-top:auto;display: flex; position: relative; z-index: 2; padding-bottom:10px;}
 .team-container .bottom-logo img {max-width: 227px;}
 .map-team-block{position: relative; z-index:9; min-height: 900px;}
 .map-team-block .section-title{text-align: center;}
@@ -335,7 +365,9 @@ to { transform: translateX(-50%); }
 .milestone-content.milestone-item3 .milestone-banner {margin-bottom: -40px;}
 .milestone-content.milestone-item4 .milestone-banner {margin-bottom: -20%;}
 .milestone-content.milestone-item5 .milestone-banner {margin-bottom: -30px;}
-.map-milestone-block .milestone-button{position: absolute; right:-40px;top:50%; width: 70px; height:70px; z-index: 1; cursor: pointer;}
+.map-milestone-block .milestone-button {position: absolute;right: -50px;top: 50%;width: 110px;height: 80px;z-index: 1;cursor: pointer;}
+
+.bottom-team-img {position: absolute;right: 0;bottom: 0;max-width: 60%;}
 
 .landing-container{overflow: hidden; z-index:1;}
 .landing-container .box-bg{display: flex; align-items: center; justify-content: center; }
@@ -406,7 +438,15 @@ to { transform: translateX(-50%); }
 .marketplace-content .marketplace-img1,
 .marketplace-content .marketplace-img2,
 .marketplace-content .marketplace-img3, 
-.algorithm-container img{animation: gravity 10s infinite;}
+.algorithm-container img,
+.fund-overview-banner img,
+.main-structure-content img,
+.inner-container.token-container:before,
+.inner-container.milestone-container:before,
+.milestone-slide0 .map-milestone-block .section-title:before,
+.map-partner-block .section-title h2:after,
+.road-map-container.partner-container:before,
+.road-map-container.team-container:before{animation: gravity 10s infinite;}
 
 
 
@@ -429,7 +469,38 @@ to { transform: translateX(-50%); }
     100% {
         transform: translate(0px,0px);
     }
-
+}
+@keyframes gravity{
+    0%{
+        transform: translate(0px,0px) ;
+    }
+    20%{
+        transform: translate(20px,0px);
+    }
+    40% {
+        transform: translate(0px,20px);
+    }
+    60% {
+        transform: translate(-20px,0px);
+    }
+    80% {
+        transform: translate(20px,20px);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+.milestone-banner .shape{animation: blink 4s infinite;}
+@keyframes blink{
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }
 
 /* responsive design */
@@ -470,11 +541,12 @@ to { transform: translateX(-50%); }
     .algorithm-container .al-left-top{max-width:140px;}
     .algorithm-container .al-right-top{max-width:80px;}
 
-    .marketplace-content .marketplace-img3 {
-        left: 63%;
-        bottom: 21%;
-        max-height: 100px;
-    }
+    .marketplace-content .marketplace-img3 {left: 63%;bottom: 21%;max-height: 100px;}
+    .main-structure-content .structure-img1 {max-height: 80px;top: -110px;}
+    .main-structure-content .structure-img3,
+    .main-structure-content .structure-img2{max-width:13%;}
+    .partner-bottom-image img {max-height: 700px;}
+
 }
 @media screen and (max-width:1599px){
     .main-about-content .about-bottom p:first-child,
@@ -510,7 +582,7 @@ to { transform: translateX(-50%); }
     .about-main-info.how-it-work::after{background-size: 60px; width: 80px; height:40%;}
     .main-about-content:before{background-position: 0 bottom;}
     .inner-container.algorithm-container:before{width:100px; height: 100px;}
-    .fund-overview-block .section-title h2:after{right:-97px;}
+    .fund-overview-block .section-title h2:after{right:-111px;}
     .fund-overview-content p{max-width: 90%; font-size: 16px;}    
 
     .fund-main-info .left-nav .link-list li a{font-size: 16px;}
@@ -531,10 +603,12 @@ to { transform: translateX(-50%); }
     .map-team-block .team-content p{font-size: 20px;}
     .map-team-block{min-height: 750px;}
 
-    .inner-container.milestone-container:before {left: -40px;bottom: -10px;width: 70px;height: 150px;background-size: contain;}
-    .inner-container.milestone-container:after {right: -23px;top: 50%;width: 40px;height: 40px;background-size: contain;}
+    .inner-container.milestone-container:before {left: -35px;bottom: -10px;width: 70px;height: 150px;background-size: contain;}
+    .inner-container.milestone-container:after {right: -20px;top: 50%;width: 40px;height: 40px;background-size: contain;}
 
-    .map-milestone-block .milestone-button{top:60%;}
+    .map-milestone-block .milestone-button {top:60%;width: 50px;right: -25px;}
+
+    
     .milestone-content{min-height:600px;}
     .main-about-content .about-bottom .icon-img {
         max-width: 10%;
@@ -545,6 +619,9 @@ to { transform: translateX(-50%); }
         font-size: 90px;
     }
     .fragmenting-box {background-size: 25px auto, auto 80px, auto 25px;}    
+    .fund-main-info .overview-img2{max-height:320px;}
+    .map-milestone-block .section-title h2,
+    .fund-overview-block .section-title h2{font-size:80px;}
 
 }
 @media screen and (max-width:1365px){
@@ -567,6 +644,8 @@ to { transform: translateX(-50%); }
     .map-milestone-block .milestone-button { width: 40px; right: -23px;}
     .announcement-top,    
     .announcement-bottom{width:350px;}
+    .fund-main-info .overview-img2 {max-height: 230px;}
+    .map-partner-block{min-height:800px;}
 }
 @media screen and (max-width:1199px){
     .sidebar{width: 200px;}
@@ -607,7 +686,7 @@ to { transform: translateX(-50%); }
     .marketplace-list {background-size: auto 20%, auto 20%;}
     .ecosystem-heading p{max-width: 100%;}
     .inner-container.algorithm-container:before{top: 150px;}
-    .fund-overview-block .section-title h2:after {right: -85px;top: -40px;height: 120px; background-size: 107px;}
+    .fund-overview-block .section-title h2:after {right: -96px;top: -33px;height: 120px; background-size: 107px;}
     .fund-overview-block:before{background-position: right 0% top 100px, 4% 80%, 40% bottom, 73% 97%;}
 
     .milestone-content h4 {font-size: 20px;letter-spacing: 0.2em;}
@@ -620,7 +699,7 @@ to { transform: translateX(-50%); }
     .road-map-container.partner-container:before{    background-size: 290px;     background-position: left top 96%;}
     .map-team-block .team-content p{max-width: 100%;}
     .map-team-block .team-content p {font-size: 16px;letter-spacing: 0.2em;}
-    .map-milestone-block .milestone-button {top: 36%;}
+    
     .milestone-content{min-height:450px;}
 
     .main-home-content p {font-size: 16px;}
@@ -628,7 +707,11 @@ to { transform: translateX(-50%); }
     .mission-container .section-title h2 {
         font-size: 50px;
     }
-    .announcement-top, .announcement-bottom {width: 250px;}    
+    .announcement-top, .announcement-bottom {width: 250px;}  
+    .map-milestone-block .section-title h2,
+    .fund-overview-block .section-title h2 {font-size: 50px;}  
+    .fund-main-info .overview-img2 {max-height: 140px;}
+    .bottom-team-img{max-width:70%;}
     
 }
 @media screen and (max-width:991px){
@@ -659,7 +742,7 @@ to { transform: translateX(-50%); }
     .fund-heading p {font-size: 16px;}
     .fund-overview-block {padding-bottom: 140px;}
     .fund-overview-content p{font-size: 14px;}
-    .fund-overview-block .section-title h2:after{right: -88px;}
+    .fund-overview-block .section-title h2:after{right: -97px;}
     
     .fund-main-info .left-nav .link-list li a {font-size: 14px;letter-spacing: 0.2em;padding: 5px 10px;margin-right: 5px;}
 
@@ -694,5 +777,9 @@ to { transform: translateX(-50%); }
     .announcement-top, .announcement-bottom {width: 230px;}
     
     .marketplace-content .marketplace-img1{max-width: 205px;}      
+
+    .main-structure-content .structure-img1 {max-height: 40px;top: -70px;}
+    .map-partner-block {min-height: 600px;}
+    .partner-bottom-image img {max-height: 420px;}   
     
 }

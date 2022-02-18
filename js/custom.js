@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
 			// let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
 
 			let home_depth = `${(_mouseX - _w) * 0.01}px, ${(_mouseY - _h) * 0.04}px`;
-			$('.home-container .box-bg img').css({
+			$('.home-container .box-bg img, .fund-main-info .overview-img2, .supply-amount img, .milestone-button, .partner-bottom-image, .bottom-team-img').css({
 				'transform':`translate(${home_depth})`
 			}); 
 
