@@ -2,17 +2,17 @@ jQuery(document).ready(function () {
 	
 
 	// ecosystem slider js
-	jQuery('.fragmenting-slider').slick({
-		slidesToShow:1,
-		slidesToScroll:1,
-		infinite:true,
-		dots:false,
-		arrows: true,
-		fade: false,
-		adaptiveHeight: true,
-		autoplay: false,
-        autoplaySpeed: 6000
-	});
+	// jQuery('.fragmenting-slider').slick({
+	// 	slidesToShow:1,
+	// 	slidesToScroll:1,
+	// 	infinite:true,
+	// 	dots:false,
+	// 	arrows: true,
+	// 	fade: false,
+	// 	adaptiveHeight: true,
+	// 	autoplay: false,
+    //     autoplaySpeed: 6000
+	// });
 
 	// ecosystem slider js
 	jQuery('.milestone-slider').slick({
@@ -38,6 +38,52 @@ jQuery(document).ready(function () {
 		$('.milestone-container').addClass('milestone-slide' + nextSlide );
 		$('.video')[0].play();
 	});
-	
 
+	// cursor movement css
+	
+		// Add event listener
+		document.addEventListener("mousemove", parallax);
+		console.log('elem')
+		// Magic happens here
+		function parallax(e) {
+			let _w = window.innerWidth/2;
+			let _h = window.innerHeight/2;
+			let _mouseX = e.clientX;
+			let _mouseY = e.clientY;
+			// let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+			// let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+			// let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+
+			let home_depth = `${(_mouseX - _w) * 0.01}px, ${(_mouseY - _h) * 0.04}px`;
+			$('.home-container .box-bg img, .about-img img, .about-bottom .icon-img, .hiw-item .hiw-img, .fragmenting-slider img, .marketplace-img img, .algorithm-container img').css({
+				'transform':`translate(${home_depth})`
+			}); 
+
+			let home_depth1 = `${(_mouseX - _w) * 0.02}px, ${(_mouseY - _h) * 0.08}px`;
+			$('.about-bottom .icon-img').css({
+				'transform':`translate(${home_depth1})`
+			});
+
+			let frag_bg1 = `${(_mouseX - _w) * 0.0001}% ${50 - (_mouseY - _h) * 0.001}%`;
+			let frag_bg2 = `${5 - (_mouseX - _w) * 0.001}% ${95 - (_mouseY - _h) * 0.001}%`;
+			let frag_bg3 = `${90 - (_mouseX - _w) * 0.001}% ${90 - (_mouseY - _h) * 0.001}%`;
+
+			$('.fragmenting-box').css({
+				'background-position':`${frag_bg1}, ${frag_bg2}, ${frag_bg3}`
+			});
+
+			let mk_bg1 = `${90 - (_mouseX - _w) * 0.001}% ${(_mouseY - _h) * 0.001}%`;
+			let mk_bg2 = `${3 - (_mouseX - _w) * 0.001}% ${75 - (_mouseY - _h) * 0.001}%`;
+			
+
+			$('.marketplace-list').css({
+				'background-position':`${mk_bg1}, ${mk_bg2}`
+			});
+
+			
+			
+
+			
+		}
 });
+
