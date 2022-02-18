@@ -55,30 +55,30 @@ jQuery(document).ready(function () {
 			// let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
 
 			let home_depth = `${(_mouseX - _w) * 0.01}px, ${(_mouseY - _h) * 0.04}px`;
-			$('.home-container .box-bg img, .about-img img, .about-bottom .icon-img, .hiw-item .hiw-img, .fragmenting-slider img, .marketplace-img img, .algorithm-container img').css({
+			$('.home-container .box-bg img').css({
 				'transform':`translate(${home_depth})`
 			}); 
 
-			let home_depth1 = `${(_mouseX - _w) * 0.02}px, ${(_mouseY - _h) * 0.08}px`;
-			$('.about-bottom .icon-img').css({
-				'transform':`translate(${home_depth1})`
-			});
+			// let home_depth1 = `${(_mouseX - _w) * 0.02}px, ${(_mouseY - _h) * 0.08}px`;
+			// $('.about-bottom .icon-img').css({
+			// 	'transform':`translate(${home_depth1})`
+			// });
 
-			let frag_bg1 = `${(_mouseX - _w) * 0.0001}% ${50 - (_mouseY - _h) * 0.001}%`;
-			let frag_bg2 = `${5 - (_mouseX - _w) * 0.001}% ${95 - (_mouseY - _h) * 0.001}%`;
-			let frag_bg3 = `${90 - (_mouseX - _w) * 0.001}% ${90 - (_mouseY - _h) * 0.001}%`;
+			// let frag_bg1 = `${(_mouseX - _w) * 0.0001}% ${50 - (_mouseY - _h) * 0.001}%`;
+			// let frag_bg2 = `${5 - (_mouseX - _w) * 0.001}% ${95 - (_mouseY - _h) * 0.001}%`;
+			// let frag_bg3 = `${90 - (_mouseX - _w) * 0.001}% ${90 - (_mouseY - _h) * 0.001}%`;
 
-			$('.fragmenting-box').css({
-				'background-position':`${frag_bg1}, ${frag_bg2}, ${frag_bg3}`
-			});
+			// $('.fragmenting-box').css({
+			// 	'background-position':`${frag_bg1}, ${frag_bg2}, ${frag_bg3}`
+			// });
 
-			let mk_bg1 = `${90 - (_mouseX - _w) * 0.001}% ${(_mouseY - _h) * 0.001}%`;
-			let mk_bg2 = `${3 - (_mouseX - _w) * 0.001}% ${75 - (_mouseY - _h) * 0.001}%`;
+			// let mk_bg1 = `${90 - (_mouseX - _w) * 0.001}% ${(_mouseY - _h) * 0.001}%`;
+			// let mk_bg2 = `${3 - (_mouseX - _w) * 0.001}% ${75 - (_mouseY - _h) * 0.001}%`;
 			
 
-			$('.marketplace-list').css({
-				'background-position':`${mk_bg1}, ${mk_bg2}`
-			});
+			// $('.marketplace-list').css({
+			// 	'background-position':`${mk_bg1}, ${mk_bg2}`
+			// });
 
 			
 			
