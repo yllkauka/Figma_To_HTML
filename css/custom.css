@@ -158,7 +158,7 @@ img{max-width: 100%;}
 .hiw-list {display: block;width: 100%;}
 .hiw-list .hiw-item {display: flex;align-items: center;margin: 0 0 10px;flex-wrap: wrap;width: 100%;}
 .hiw-list .hiw-item:nth-child(2n+1) {flex-direction: row-reverse;}
-.hiw-list .hiw-item .hiw-img {width: 40%;padding:5px 30px;text-align: center;}
+.hiw-list .hiw-item .hiw-img {width: 40%;padding:5px 30px;text-align: center; display: flex; align-items: center; justify-content: space-around;}
 .hiw-list .hiw-item .hiw-text {width: 60%;padding: 0 0 0 0px;}
 .hiw-list .hiw-item .hiw-text p{font-size: 18px; line-height: 1.3; letter-spacing: 0.33em;}
 
@@ -217,7 +217,11 @@ to { transform: translateX(-50%); }
 .marketplace-item .marketplace-text p{font-size: 20px; line-height: 1.3; letter-spacing: 0.33em;}
 /*.inner-container.algorithm-container:before {position: absolute;right:2%;top: 240px;background: url(../images/alg-1.png);width: 150px;content: "";height: 150px;background-size:113px;background-repeat: no-repeat;background-position: center; pointer-events: none;}*/
 .algorithm-container .al-right-top {position: absolute;right: 4%;top: 24%;}
-.algorithm-container .al-left-top {position: absolute;left: 20px;top:40px; max-width: 180px;}
+
+.algorithm-container .al-left-top {position: absolute;left: 20px;top: 40px;width: 180px;height: 180px;}
+.algorithm-container .al-left-top .al-1 {position: absolute;right: 0;width: 77px;}
+.algorithm-container .al-left-top .al-2 {left:30%;top:30%;max-width: 63px;position: absolute;}
+.algorithm-container .al-left-top .al-3 {bottom: 0;left: 0;max-width: 43px;position: absolute;}
 .algorithmic-block .al-blk-img1 {position: absolute;left: 0;top: 30%;}
 .algorithmic-block .al-blk-img2 {position: absolute;bottom:20px;right: 0;}
 .algorithmic-block{padding: 30px 0 130px;}
@@ -428,17 +432,9 @@ letter-spacing: 0;
 
 /* road map css end */
 
+
 /* animation for images */
-.about-img img, 
-.about-bottom .icon-img, 
-.hiw-item .hiw-img, 
-.fragmenting-box .fragmenting-img1,
-.fragmenting-box .fragmenting-img2,
-.fragmenting-box .fragmenting-img3, 
-.marketplace-content .marketplace-img1,
-.marketplace-content .marketplace-img2,
-.marketplace-content .marketplace-img3, 
-.algorithm-container img,
+ 
 .fund-overview-banner img,
 .main-structure-content img,
 .inner-container.token-container:before,
@@ -448,48 +444,100 @@ letter-spacing: 0;
 .road-map-container.partner-container:before,
 .road-map-container.team-container:before{animation: gravity 10s infinite;}
 
+.icon-animation{animation: gravity 10s infinite;}
 
 
 @-webkit-keyframes gravity{
     0%{
-        transform: translate(0px,0px) ;
+        transform: translate(0px,0px) scale(1);
+        opacity:1;
     }
     20%{
-        transform: translate(20px,0px);
+        transform: translate(25px,0px) scale(0.8);
     }
     40% {
-        transform: translate(0px,20px);
+        transform: translate(0px,25px) scale(1);
+        opacity:0.7;
     }
     60% {
-        transform: translate(-20px,0px);
+        transform: translate(-25px,0px) scale(1.1);
     }
     80% {
-        transform: translate(20px,20px);
+        transform: translate(0px,-25px) scale(0.9);
     }
     100% {
-        transform: translate(0px,0px);
+        transform: translate(0px,0px) scale(1);
+        opacity:1;
     }
 }
 @keyframes gravity{
     0%{
-        transform: translate(0px,0px) ;
+        transform: translate(0px,0px) scale(1);
+        opacity:1;
     }
     20%{
-        transform: translate(20px,0px);
+        transform: translate(25px,0px) scale(0.8);
     }
     40% {
-        transform: translate(0px,20px);
+        transform: translate(0px,25px) scale(1);
+        opacity:0.7;
     }
     60% {
-        transform: translate(-20px,0px);
+        transform: translate(-25px,0px) scale(1.1);
     }
     80% {
-        transform: translate(20px,20px);
+        transform: translate(0px,-25px) scale(0.9);
     }
     100% {
-        transform: translate(0px,0px);
+        transform: translate(0px,0px) scale(1);
+        opacity:1;
     }
 }
+
+@-webkit-keyframes gravityReverse{
+    0%{
+        transform: translate(0px,0px) scale(1);
+    }
+    20%{
+        transform: translate(-20px,0px) scale(0.8);
+    }
+    40% {
+        transform: translate(0px,-20px) scale(1);
+    }
+    60% {
+        transform: translate(20px,0px) scale(1.1);
+    }
+    80% {
+        transform: translate(20px,20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px,0px) scale(1);
+    }
+}
+@keyframes gravityReverse{
+    0%{
+        transform: translate(0px,0px) scale(1);
+        opacity:1;
+    }
+    20%{
+        transform: translate(-30px,0px) scale(0.8);
+    }
+    40% {
+        transform: translate(0px,-30px) scale(1);
+        opacity:0.7;
+    }
+    60% {
+        transform: translate(-30px,0px) scale(1.1);
+    }
+    80% {
+        transform: translate(0px,-30px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px,0px) scale(1);
+        opacity:1;
+    }
+}
+
 .milestone-banner .shape{animation: blink 4s infinite;}
 @keyframes blink{
     0%{
@@ -502,6 +550,29 @@ letter-spacing: 0;
         opacity:1;
     }
 }
+
+/* single element animation css */
+.about-img {position: relative;min-height: 250px;}
+.about-img > img {position: absolute;}
+.about-img .about-img1 {left: 0;top: 10%;max-width:40px;}
+.about-img .about-img2 {left:5%;top:15%;max-width: 135px; animation-duration:8s;}
+.about-img .about-img3 {left: 20%;bottom:10%;max-width: 50px; animation-duration:12s;}
+.about-img .about-img4 {left: 32%;top: 30%; animation-duration:14s;}
+.about-img .about-img5 {right: 40%;top: 50%;max-width: 70px; animation-duration:11s;}
+.about-img .about-img6 {right: 17%;top: 10%;max-width: 170px; animation-duration:9s;}
+.about-img .about-img7 {right: 5%;top:5%;max-width:50px; animation-duration:5s;}
+
+.about-bottom .icon-img1 {max-width: 80px;position: absolute;left: 0;bottom: 30%; animation-duration:16s;}
+.about-bottom .icon-img2 {position: absolute;left: 5%;bottom: 3%;max-width: 160px; animation-duration:12s;}
+.icon-animation.w-125 {max-width: 125px;}
+
+.algorithmic-block .al-blk-img2 {position: absolute;bottom: 20px;right: 0;width: 230px;height: 140px;}
+.algorithmic-block .al-blk-img2 .albk-1 {position: absolute;right: 0;top: -20px;}
+.algorithmic-block .al-blk-img2 .albk-2 {position: absolute;right: 70px;bottom: 10px;}
+.algorithmic-block .al-blk-img2 .albk-3 {position: absolute;left: -40px;bottom: 10px;}
+#scroll-video{min-height:200vh;}
+.fragmenting-video{position:sticky; top:0;}
+.fragmenting-video video {width: 100%;height: auto;opacity: 0.3;}
 
 /* responsive design */
 @media screen and (min-width:1900px) and (min-height:1000px) {
@@ -547,6 +618,8 @@ letter-spacing: 0;
     .main-structure-content .structure-img2{max-width:13%;}
     .partner-bottom-image img {max-height: 700px;}
 
+    .about-bottom .icon-img1{bottom: 20%; max-width:60px;}
+    .about-bottom .icon-img2 {left: 0%;bottom: -10%;max-width: 100px;}
 }
 @media screen and (max-width:1599px){
     .main-about-content .about-bottom p:first-child,
@@ -646,6 +719,16 @@ letter-spacing: 0;
     .announcement-bottom{width:350px;}
     .fund-main-info .overview-img2 {max-height: 230px;}
     .map-partner-block{min-height:800px;}
+
+    .about-img .about-img2{max-width:90px;}
+    .about-img .about-img4{max-width: 120px;}
+    .about-img .about-img5{max-width:40px;}     
+    .about-img .about-img6{max-width:120px;}
+
+    .algorithm-container .al-left-top .al-1{width:57px;}
+    .algorithm-container .al-left-top .al-2{width:36px;}
+    .algorithm-container .al-left-top .al-3{width:30px;}
+    .algorithm-container .al-left-top{height: 120px;}
 }
 @media screen and (max-width:1199px){
     .sidebar{width: 200px;}
