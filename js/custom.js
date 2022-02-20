@@ -1,6 +1,10 @@
 jQuery(document).ready(function () {
 	
 
+	
+
+
+
 	// ecosystem slider js
 	// jQuery('.fragmenting-slider').slick({
 	// 	slidesToShow:1,
@@ -98,6 +102,8 @@ jQuery(document).ready(function () {
 		// 	requestAnimationFrame(scrollVideo);
 		// }
 		// registerVideo("#scroll-video", "#scroll-video video");
+
+		
 
 		
 });
