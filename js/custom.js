@@ -82,22 +82,22 @@ jQuery(document).ready(function () {
 			
 		}
 
-		const registerVideo = (bound, video) => {
-			bound = document.querySelector(bound);
-			video = document.querySelector(video);
-			const scrollVideo = ()=>{
-				if(video.duration) {
-					const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
-					const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
-					const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+		// const registerVideo = (bound, video) => {
+		// 	bound = document.querySelector(bound);
+		// 	video = document.querySelector(video);
+		// 	const scrollVideo = ()=>{
+		// 		if(video.duration) {
+		// 			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+		// 			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+		// 			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 					
-					video.currentTime = video.duration * percentScrolled * 0.1;
-				}
-				requestAnimationFrame(scrollVideo);
-			}
-			requestAnimationFrame(scrollVideo);
-		}
-		registerVideo("#scroll-video", "#scroll-video video");
+		// 			video.currentTime = video.duration * percentScrolled * 0.1;
+		// 		}
+		// 		requestAnimationFrame(scrollVideo);
+		// 	}
+		// 	requestAnimationFrame(scrollVideo);
+		// }
+		// registerVideo("#scroll-video", "#scroll-video video");
 
 		
 });

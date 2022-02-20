@@ -285,7 +285,7 @@ letter-spacing: 0;
 .supply-amount .token-money1 {position: absolute;right: -30px;top: 30px;pointer-events: none;}
 .supply-amount .token-money2 {position: absolute;right: -170px;top: 38%;pointer-events: none;}
 
-.inner-container.token-container:before {position: absolute;content: "";left: 0;top: 0;right: 0;bottom: 0; background-image:url(../images/token-bg1.png), url(../images/token-bg3.png), url(../images/token-bg3.png), url(../images/token-bg2.png); background-repeat: no-repeat; background-position: left top, right 45px top 45px, left 45px bottom 45px, right bottom; pointer-events: none; z-index: 1;}
+/* .inner-container.token-container:before {position: absolute;content: "";left: 0;top: 0;right: 0;bottom: 0; background-image:url(../images/token-bg1.png), url(../images/token-bg3.png), url(../images/token-bg3.png), url(../images/token-bg2.png); background-repeat: no-repeat; background-position: left top, right 45px top 45px, left 45px bottom 45px, right bottom; pointer-events: none; z-index: 1;} */
 
 /* fund page css end */
 
@@ -434,15 +434,11 @@ letter-spacing: 0;
 
 
 /* animation for images */
- 
-.fund-overview-banner img,
-.main-structure-content img,
-.inner-container.token-container:before,
 .inner-container.milestone-container:before,
 .milestone-slide0 .map-milestone-block .section-title:before,
-.map-partner-block .section-title h2:after,
 .road-map-container.partner-container:before,
 .road-map-container.team-container:before{animation: gravity 10s infinite;}
+.map-partner-block .section-title h2:after{animation: gravity 14s infinite;}
 
 .icon-animation{animation: gravity 10s infinite;}
 
@@ -450,14 +446,14 @@ letter-spacing: 0;
 @-webkit-keyframes gravity{
     0%{
         transform: translate(0px,0px) scale(1);
-        opacity:1;
+        
     }
     20%{
         transform: translate(25px,0px) scale(0.8);
     }
     40% {
         transform: translate(0px,25px) scale(1);
-        opacity:0.7;
+        
     }
     60% {
         transform: translate(-25px,0px) scale(1.1);
@@ -467,20 +463,20 @@ letter-spacing: 0;
     }
     100% {
         transform: translate(0px,0px) scale(1);
-        opacity:1;
+        
     }
 }
 @keyframes gravity{
     0%{
         transform: translate(0px,0px) scale(1);
-        opacity:1;
+       
     }
     20%{
         transform: translate(25px,0px) scale(0.8);
     }
     40% {
         transform: translate(0px,25px) scale(1);
-        opacity:0.7;
+       
     }
     60% {
         transform: translate(-25px,0px) scale(1.1);
@@ -490,53 +486,10 @@ letter-spacing: 0;
     }
     100% {
         transform: translate(0px,0px) scale(1);
-        opacity:1;
+        
     }
 }
 
-@-webkit-keyframes gravityReverse{
-    0%{
-        transform: translate(0px,0px) scale(1);
-    }
-    20%{
-        transform: translate(-20px,0px) scale(0.8);
-    }
-    40% {
-        transform: translate(0px,-20px) scale(1);
-    }
-    60% {
-        transform: translate(20px,0px) scale(1.1);
-    }
-    80% {
-        transform: translate(20px,20px) scale(0.9);
-    }
-    100% {
-        transform: translate(0px,0px) scale(1);
-    }
-}
-@keyframes gravityReverse{
-    0%{
-        transform: translate(0px,0px) scale(1);
-        opacity:1;
-    }
-    20%{
-        transform: translate(-30px,0px) scale(0.8);
-    }
-    40% {
-        transform: translate(0px,-30px) scale(1);
-        opacity:0.7;
-    }
-    60% {
-        transform: translate(-30px,0px) scale(1.1);
-    }
-    80% {
-        transform: translate(0px,-30px) scale(0.9);
-    }
-    100% {
-        transform: translate(0px,0px) scale(1);
-        opacity:1;
-    }
-}
 
 .milestone-banner .shape{animation: blink 4s infinite;}
 @keyframes blink{
@@ -573,6 +526,23 @@ letter-spacing: 0;
 #scroll-video{min-height:200vh;}
 .fragmenting-video{position:sticky; top:0;}
 .fragmenting-video video {width: 100%;height: auto;opacity: 0.3;}
+
+.fund-overview-banner {position: relative;height: 300px;}
+.fund-overview-banner img{position: absolute;}
+.fund-overview-banner .fo-icon1 {left: 0;top: 0;opacity: 0.5;width: 70px;}
+.fund-overview-banner .fo-icon2 {left: 6%;top: 40%;opacity: 0.5;}
+.fund-overview-banner .fo-icon3 {left: 25%;top: 20%;opacity: 0.6;}
+.fund-overview-banner .fo-icon4 {left: 38%;top: 40%; opacity:0.3;}
+.fund-overview-banner .fo-icon5 {left: 50%;top: 2%;opacity: 0.4 !important;}
+.fund-overview-banner .fo-icon6 {right: 20%;top: 30%;}
+.fund-overview-banner .fo-icon7 {right: 0;top: 10%;opacity: 0.2;}
+
+.token-container .token-icon1 {position: absolute;left: 0;top: 0;}
+.token-container .token-icon2 {position: absolute;right: 0;top: 0;}
+.token-container .token-icon3 {left: 0;bottom: 0;position: absolute;}
+.token-container .token-icon4 {right: 0;bottom: 0;position: absolute;}
+
+.token-container > .icon-animation{max-width:150px;z-index: 1;}
 
 /* responsive design */
 @media screen and (min-width:1900px) and (min-height:1000px) {
@@ -620,6 +590,7 @@ letter-spacing: 0;
 
     .about-bottom .icon-img1{bottom: 20%; max-width:60px;}
     .about-bottom .icon-img2 {left: 0%;bottom: -10%;max-width: 100px;}
+    .token-container > .icon-animation {max-width:100px;}
 }
 @media screen and (max-width:1599px){
     .main-about-content .about-bottom p:first-child,
@@ -695,7 +666,7 @@ letter-spacing: 0;
     .fund-main-info .overview-img2{max-height:320px;}
     .map-milestone-block .section-title h2,
     .fund-overview-block .section-title h2{font-size:80px;}
-
+  
 }
 @media screen and (max-width:1365px){
     .sidebar-nav .main-nav > li {margin: 0 0 20px;}
@@ -729,6 +700,7 @@ letter-spacing: 0;
     .algorithm-container .al-left-top .al-2{width:36px;}
     .algorithm-container .al-left-top .al-3{width:30px;}
     .algorithm-container .al-left-top{height: 120px;}
+    .token-container > .icon-animation {max-width:70px;}
 }
 @media screen and (max-width:1199px){
     .sidebar{width: 200px;}
@@ -795,6 +767,7 @@ letter-spacing: 0;
     .fund-overview-block .section-title h2 {font-size: 50px;}  
     .fund-main-info .overview-img2 {max-height: 140px;}
     .bottom-team-img{max-width:70%;}
+    .token-container > .icon-animation {max-width:50px;}
     
 }
 @media screen and (max-width:991px){
