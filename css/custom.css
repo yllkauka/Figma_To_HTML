@@ -991,7 +991,7 @@ letter-spacing: 0;
     }
     .fund-main-info .left-nav .link-list li{width:auto;}
 
-    .home .main-content:before {
+    .main-content:before {
         position: fixed;
         content: "";
         left: 0;
@@ -1005,6 +1005,8 @@ letter-spacing: 0;
     }
     .landing-container {overflow: visible;z-index: initial;}
     .top-heading{position: relative; z-index:10;}
+    .main-landing-content:before{opacity:1;}
+    .home-container .box-bg{z-index:4;}
 }
 @media (max-width:400px){
     .section-title h2 {font-size: 20px;}
