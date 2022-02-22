@@ -1001,6 +1001,7 @@ letter-spacing: 0;
         height: 100%;
         pointer-events: none;
         z-index: 4;
+        opacity:0.8;
     }
     .landing-container {overflow: visible;z-index: initial;}
     .top-heading{position: relative; z-index:10;}
