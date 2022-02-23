@@ -176,7 +176,7 @@ img{max-width: 100%;}
 .announcement-bottom{position: fixed;left: 0;width: 450px;bottom:175px;  overflow: hidden}
 
 .announcement-text {background: linear-gradient(180deg, rgba(2, 13, 56, 0.9) 0%, rgba(2, 13, 55, 0.9) 51.35%, rgba(2, 13, 55, 0.9) 100%);padding: 10px;font-size: 30px;line-height: 1.2;display: flex;flex-wrap: nowrap;overflow: hidden; position: relative; width: 100vw; height:78px;}
-.announcement-text p{position: absolute;white-space: nowrap;will-change: transform;animation: marquee 30s linear infinite; margin: 0;white-space: pre; top:22px; letter-spacing: 0.15em;}
+.announcement-text p{position: absolute;white-space: nowrap;will-change: transform;animation: marquee 30s linear infinite; margin: 0;white-space: pre; top:22px; letter-spacing: 0.15em; text-transform: uppercase;}
 @-webkit-keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -854,7 +854,9 @@ letter-spacing: 0;
     .mission-container .lm-icon-3 {right: 5%;top: 30px;max-width: 40px;}
     
 }
-
+@media (min-width:768px){
+    .mobile-show{display: none !important;}
+}
 @media (max-width:767px){
     .page-box:before {position: absolute;content: "";left: 0;top: 0;background: linear-gradient(180deg, rgba(3, 43, 146, 0) 0%, #000B31 100%);width: 100%;height: 100%; pointer-events: none;}
 
@@ -1018,11 +1020,11 @@ letter-spacing: 0;
         z-index: 4;
         opacity:0.8;
     }
-    .fund-main-info .main-content:before{display: none;}
+    .fund-main-info.main-content:before{display: none;}
     .inner-container.fund-container.token-container{z-index:10;}
     .token-container .token-icon1 {left: 40px;top: 80px;}
     .token-container .token-icon2 {right: 40px;top: 80px;}
-    .token-container .token-icon3 {left: 40px;bottom:-50px;}
+    .token-container .token-icon3 {left: 40px;bottom:-90px;}
     .token-container .token-icon4 {right: 40px;bottom:-50px;}
     .token-container > .icon-animation {max-width: 70px;}
 
@@ -1037,7 +1039,15 @@ letter-spacing: 0;
     .mission-container .lm-icon-2 {top: 120px;left: 40%;max-width: 40px;}
     .mission-container .lm-icon-4{top:110px;   max-width:40px;}
     .mission-container .lm-icon-3 {right: 5%;top:80px;max-width: 40px;}
-    .wave-effect{z-index:11;}
+    .milestone-wrapper{z-index:11;}
+    .map-milestone-block .milestone-button{z-index: 12;}
+    .token-container .token-icon5 {
+        left:10px;
+        bottom: 20px;
+        top: auto;
+        position: absolute;
+        max-width: 50px;
+    }
 }
 @media (max-width:400px){
     .section-title h2 {font-size: 20px;}
