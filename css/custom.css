@@ -1024,8 +1024,8 @@ letter-spacing: 0;
     .inner-container.fund-container.token-container{z-index:10;}
     .token-container .token-icon1 {left: 40px;top: 80px;}
     .token-container .token-icon2 {right: 40px;top: 80px;}
-    .token-container .token-icon3 {left: 40px;bottom:-90px;}
-    .token-container .token-icon4 {right: 40px;bottom:-50px;}
+    .token-container .token-icon3 {left: 40px;bottom:20px;}
+    .token-container .token-icon4 {right: 40px;bottom:20px;}
     .token-container > .icon-animation {max-width: 70px;}
 
     .landing-container {overflow: visible;z-index: initial;}
@@ -1043,7 +1043,7 @@ letter-spacing: 0;
     .map-milestone-block .milestone-button{z-index: 12;}
     .token-container .token-icon5 {
         left:10px;
-        bottom: 20px;
+        bottom: 110px;
         top: auto;
         position: absolute;
         max-width: 50px;
