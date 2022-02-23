@@ -1037,6 +1037,7 @@ letter-spacing: 0;
     .mission-container .lm-icon-2 {top: 120px;left: 40%;max-width: 40px;}
     .mission-container .lm-icon-4{top:110px;   max-width:40px;}
     .mission-container .lm-icon-3 {right: 5%;top:80px;max-width: 40px;}
+    .wave-effect{z-index:11;}
 }
 @media (max-width:400px){
     .section-title h2 {font-size: 20px;}
