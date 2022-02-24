@@ -173,7 +173,7 @@ img{max-width: 100%;}
 .main-content.ecosystem-main-info {overflow: hidden;}
 
 .announcement-top{position: fixed;left: 0;width: 450px;top:175px; overflow: hidden;}
-.announcement-bottom{position: fixed;right: 0;width:217px;bottom:175px;  overflow: hidden}
+.announcement-bottom{position: fixed;right: 0;width:217px;top:175px;  overflow: hidden}
 
 .announcement-text {background: linear-gradient(180deg, rgba(2, 13, 56, 0.9) 0%, rgba(2, 13, 55, 0.9) 51.35%, rgba(2, 13, 55, 0.9) 100%);padding: 10px;font-size: 30px;line-height: 1.2;display: flex;flex-wrap: nowrap;overflow: hidden; position: relative; width: 100vw; height:78px;}
 .announcement-text p{position: absolute;white-space: nowrap;will-change: transform;animation: marquee 30s linear infinite; margin: 0;white-space: pre; top:22px; letter-spacing: 0.15em; text-transform: uppercase;}
