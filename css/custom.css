@@ -172,11 +172,11 @@ img{max-width: 100%;}
 /* ecosystem page start  */
 .main-content.ecosystem-main-info {overflow: hidden;}
 
-.announcement-top{position: fixed;left: 0;width: 450px;top:175px; overflow: hidden;}
-.announcement-bottom{position: fixed;right: 0;width:217px;top:175px;  overflow: hidden}
+.announcement-top{position: absolute;left: 0;width: 100%;top:106px; overflow: hidden; z-index:20;}
+.announcement-bottom{position: absolute;right: 0;width:217px;top:175px;  overflow: hidden}
 
 .announcement-text {background: linear-gradient(180deg, rgba(2, 13, 56, 0.9) 0%, rgba(2, 13, 55, 0.9) 51.35%, rgba(2, 13, 55, 0.9) 100%);padding: 10px;font-size: 30px;line-height: 1.2;display: flex;flex-wrap: nowrap;overflow: hidden; position: relative; width: 100vw; height:78px;}
-.announcement-text p{position: absolute;white-space: nowrap;will-change: transform;animation: marquee 30s linear infinite; margin: 0;white-space: pre; top:22px; letter-spacing: 0.15em; text-transform: uppercase;}
+.announcement-text p{position: absolute;white-space: nowrap;will-change: transform;animation: marquee 60s linear infinite; margin: 0;white-space: pre; top:22px; letter-spacing: 0.15em; text-transform: uppercase;}
 @-webkit-keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -558,14 +558,16 @@ letter-spacing: 0;
     .sidebar-nav .main-nav > li{margin-bottom:70px;}
     
 }
-@media screen and (max-width:1799px){
+@media screen and (max-width:1850px){
     .main-home-content{min-height:450px; padding-bottom: 50px;}
     .main-home-content p {font-size: 20px;letter-spacing:0px;}
     .main-about-content{background-position: top center;}
     .main-about-content .about-bottom p{max-width: 80%;}
     /* .main-about-content .about-top {padding-bottom:210px;} */
     .section-title h2{font-size: 65px;}
-    .ecosystem-main-info .top-heading .right-btn{margin-left: auto;}
+    .ecosystem-main-info .top-heading .right-btn{margin-left: auto;width: 100%;
+        display: flex;
+        justify-content: flex-end;}
     .ecosystem-main-info .top-heading .left-nav{order:1;}
     .algorithmic-rte p {font-size: 20px;}
     .inner-container.algorithm-container:before{background-size: 80px; top: 200px;}
@@ -601,6 +603,9 @@ letter-spacing: 0;
     .about-bottom .icon-img2 {left: 0%;bottom: -10%;max-width: 100px;}
     .token-container > .icon-animation {max-width:100px;}
     .mission-container .section-title h2 {font-size: 90px;}
+    .announcement-top{top:138px;}
+    .announcement-text{height:60px;font-size:24px;}
+    .announcement-text p{top:16px}
 }
 @media screen and (max-width:1599px){
     .main-about-content .about-bottom p:first-child,
@@ -675,6 +680,7 @@ letter-spacing: 0;
     .map-milestone-block .section-title h2,
     .fund-overview-block .section-title h2{font-size:80px;}
     .home_bottom_title{font-size:37px; line-height:1.1;}
+    .announcement-top{top:138px;}
   
 }
 @media screen and (max-width:1365px){
@@ -695,8 +701,8 @@ letter-spacing: 0;
 
     .road-map-container.team-container:before{background-size: 320px;background-position: left top 60%;}
     .map-milestone-block .milestone-button { width: 40px; right: -23px;}
-    .announcement-top{width:350px;}
-    .announcement-bottom{width: 117px;}
+    /* .announcement-top{width:350px;}
+    .announcement-bottom{width: 117px;} */
     .fund-main-info .overview-img2 {max-height: 230px;}
     .map-partner-block{min-height:800px;}
 
@@ -711,6 +717,7 @@ letter-spacing: 0;
     .algorithm-container .al-left-top{height: 120px;}
     .token-container > .icon-animation {max-width:70px;}
     .home_bottom_title{font-size:30px; line-height:1.1;}
+    .announcement-top {top: 132px;}
 }
 @media screen and (max-width:1199px){
     .sidebar{width: 200px;}
@@ -731,7 +738,8 @@ letter-spacing: 0;
 
     .home-main-info .inner-container{max-width: calc(100% - 100px);}
     .home-main-info::before,.home-main-info::after{width:60px; height:80px;}
-
+    /* .announcement-top {top:116px;} */
+    .announcement-top {top: 116px;}
     .section-title h2{font-size:40px;}
     .section-title{margin-bottom: 30px;}
 
@@ -772,8 +780,8 @@ letter-spacing: 0;
     .mission-container .section-title h2 {
         font-size: 50px;
     }
-    .announcement-top {width: 250px;}  
-    .announcement-bottom {width: 81px;} 
+    /* /* .announcement-top {width: 250px;}   */
+    .announcement-bottom {width: 81px;}  */
     .map-milestone-block .section-title h2,
     .fund-overview-block .section-title h2 {font-size: 50px;}  
     .fund-main-info .overview-img2 {max-height: 140px;}
@@ -842,7 +850,7 @@ letter-spacing: 0;
         background-size: 25px auto, auto 60px, auto 25px;
         background-position: left center, 12% 90%, bottom right;
     }
-    .announcement-top{width: 230px;}
+    /* .announcement-top{width: 230px;} */
     .announcement-bottom{width:62px;}
     
     .marketplace-content .marketplace-img1{max-width: 205px;}      
@@ -942,7 +950,13 @@ letter-spacing: 0;
     .hiw-list .hiw-item .hiw-img{padding: 5px 20px;}
     
     .main-content.ecosystem-main-info {overflow: visible;}
-    .announcement-top, .announcement-bottom {width: 33%;top: -45px; left:-15px; position: absolute;}
+    .announcement-top {
+        top: -32px;
+        left: -15px;
+        position: absolute;
+        width: auto;
+        right: -15px;
+    }
     .announcement-bottom {left: auto;right: -15px; bottom: auto;}
     .announcement-text {font-size: 10px;height: 33px;}
     .announcement-text p {top: 10px;}
