@@ -173,7 +173,7 @@ img{max-width: 100%;}
 .main-content.ecosystem-main-info {overflow: hidden;}
 
 .announcement-top{position: fixed;left: 0;width: 450px;top:175px; overflow: hidden;}
-.announcement-bottom{position: fixed;left: 0;width: 450px;bottom:175px;  overflow: hidden}
+.announcement-bottom{position: fixed;right: 0;width:217px;bottom:175px;  overflow: hidden}
 
 .announcement-text {background: linear-gradient(180deg, rgba(2, 13, 56, 0.9) 0%, rgba(2, 13, 55, 0.9) 51.35%, rgba(2, 13, 55, 0.9) 100%);padding: 10px;font-size: 30px;line-height: 1.2;display: flex;flex-wrap: nowrap;overflow: hidden; position: relative; width: 100vw; height:78px;}
 .announcement-text p{position: absolute;white-space: nowrap;will-change: transform;animation: marquee 30s linear infinite; margin: 0;white-space: pre; top:22px; letter-spacing: 0.15em; text-transform: uppercase;}
@@ -695,8 +695,8 @@ letter-spacing: 0;
 
     .road-map-container.team-container:before{background-size: 320px;background-position: left top 60%;}
     .map-milestone-block .milestone-button { width: 40px; right: -23px;}
-    .announcement-top,    
-    .announcement-bottom{width:350px;}
+    .announcement-top{width:350px;}
+    .announcement-bottom{width: 117px;}
     .fund-main-info .overview-img2 {max-height: 230px;}
     .map-partner-block{min-height:800px;}
 
@@ -772,7 +772,8 @@ letter-spacing: 0;
     .mission-container .section-title h2 {
         font-size: 50px;
     }
-    .announcement-top, .announcement-bottom {width: 250px;}  
+    .announcement-top {width: 250px;}  
+    .announcement-bottom {width: 81px;} 
     .map-milestone-block .section-title h2,
     .fund-overview-block .section-title h2 {font-size: 50px;}  
     .fund-main-info .overview-img2 {max-height: 140px;}
@@ -841,7 +842,8 @@ letter-spacing: 0;
         background-size: 25px auto, auto 60px, auto 25px;
         background-position: left center, 12% 90%, bottom right;
     }
-    .announcement-top, .announcement-bottom {width: 230px;}
+    .announcement-top{width: 230px;}
+    .announcement-bottom{width:62px;}
     
     .marketplace-content .marketplace-img1{max-width: 205px;}      
 
